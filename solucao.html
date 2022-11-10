@@ -61,16 +61,59 @@
                                          ${c1} - ${cav1.toFixed(2)} - ${cavalo1.toFixed(2)} – ${c2} – ${cav2.toFixed(2)} – ${cavalo2.toFixed(2)} - ${c3} – ${cav3.toFixed(2)} –${cavalo3.toFixed(2)}    <br>`
         }
 
+            // Cavalo 1 em primeiro, cavalo 2 em segundo e cavalo 3 em terceiro
         if (cavalo1 > cavalo2 && cavalo1 > cavalo3 && cavalo2 > cavalo3) {
             resultado.innerHTML = `
-            Em 1º Lugar – ${cavalo1} <br>
+            Em 1º Lugar – ${c1} <br>
 
-            Em 2º Lugar – ${cavalo2} <br>
+            Em 2º Lugar – ${c2} <br>
 
-            Em 3º Lugar – ${cavalo3} <br>
+            Em 3º Lugar – ${c3} <br>
             `
-        } else if (cavalo2 > cavalo1 && cavalo2 > cavalo3 && cavalo2 > cavalo3) {
+             // Cavalo 2 em primeiro, cavalo 1 em segundo e cavalo 3 em terceiro
+        } else if (cavalo2 > cavalo1 && cavalo2 > cavalo3 && cavalo1 > cavalo3) {
+            resultado.innerHTML = `
+            Em 1º Lugar – ${c2} <br>
 
+            Em 2º Lugar – ${c1} <br>
+
+            Em 3º Lugar – ${c3} <br>
+            `
+            // cavalo 3 em primeiro cavalo2 em segundo cavalo1
+        }else if(cavalo3 > cavalo1 && cavalo3 > cavalo2 && cavalo2 > cavalo1){
+            resultado.innerHTML = `
+            Em 1º Lugar – ${c3} <br>
+
+            Em 2º Lugar – ${c2} <br>
+
+            Em 3º Lugar – ${c1} <br>
+            `
+            // cavalo 3 em primeiro cavalo 1 em segundo cavalo2 em terceiro
+        }else if(cavalo2 > cavalo1 && cavalo3 > cavalo2 && cavalo1 > cavalo2){
+            resultado.innerHTML = `
+            Em 1º Lugar – ${c3} <br>
+
+            Em 2º Lugar – ${c1} <br>
+
+            Em 3º Lugar – ${c2} <br>
+            `
+            // cavalo 3 em oprimeiro cavalo 
+        }else if(cavalo2 > cavalo1 && cavalo3 > cavalo2 && cavalo1 > cavalo2){
+            resultado.innerHTML = `
+            Em 1º Lugar – ${c2} <br>
+
+            Em 2º Lugar – ${c3} <br>
+
+            Em 3º Lugar – ${c1} <br>
+            `
+        }else if(cavalo2 > cavalo1 && cavalo3 > cavalo2 && cavalo1 > cavalo2){
+            resultado.innerHTML = `
+            Em 1º Lugar – ${c3} <br>
+
+            Em 2º Lugar – ${c1} <br>
+
+            Em 3º Lugar – ${c2} <br>
+            `
         }
 
     }
