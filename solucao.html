@@ -11,8 +11,13 @@
 <body>
     Digite o nome do primeiro cavalo: <br><input type="text" id="nome_cavalo1"><br>
     Digite o nome do segundo cavalo: <br><input type="text" id="nome_cavalo2"><br>
-    Digite o nome do terceiro cavalo: <br> <input type="text" id="nome_cavalo3"><br>
+    Digite o nome do terceiro cavalo: <br> <input type="text" id="nome_cavalo3"><br> <br>
     <!-- Colocar input de voltas -->
+
+    Digite o número de voltas: <input type="number" id="in_voltas"> <br><br>
+
+    Digite o tempo mínimo da volta: <input type="number" id="in_minimo"> <br>
+    Digite o tempo máximo da volta: <input type="number" id="in_maximo"> <br><br>
 
     <button onclick="corrida()">Dar a largada</button><br>
 
@@ -26,16 +31,25 @@
 
 <script>
     function corrida() {
+        var c1 = nome_cavalo1.value
+        var c2 = nome_cavalo2.value
+        var c3 = nome_cavalo3.value
+
+        var totalVoltas = Number(in_voltas.value)
+
+        var minimo = Number(in_minimo.value)
+        var maximo = Number(in_maximo.value)
+
         var cavalo1 = 0
         var cavalo2 = 0
         var cavalo3 = 0
 
         var voltas = 0
 
-        for (i = 0; i < 7; i++) {
-            var cav1 = 7 + Math.random() * (9 - 7)
-            var cav2 = 7 + Math.random() * (9 - 7)
-            var cav3 = 7 + Math.random() * (9 - 7)
+        for (i = 0; i < totalVoltas; i++) {
+            var cav1 = minimo + Math.random() * (maximo - minimo)
+            var cav2 = minimo + Math.random() * (maximo - minimo)
+            var cav3 = minimo + Math.random() * (maximo - minimo)
 
             cavalo1 += cav1
             cavalo2 += cav2
@@ -44,7 +58,7 @@
             voltas++
 
             div_mensagem.innerHTML += `Volta ${voltas} <br>
-                                         Cavalo 01 - ${cav1.toFixed(2)} - ${cavalo1.toFixed(2)} – Cavalo02 – ${cav2.toFixed(2)} – ${cavalo2.toFixed(2)} - Cavalo03 – ${cav3.toFixed(2)} –${cavalo3.toFixed(2)}    <br>`
+                                         ${c1} - ${cav1.toFixed(2)} - ${cavalo1.toFixed(2)} – ${c2} – ${cav2.toFixed(2)} – ${cavalo2.toFixed(2)} - ${c3} – ${cav3.toFixed(2)} –${cavalo3.toFixed(2)}    <br>`
         }
 
         if (cavalo1 > cavalo2 && cavalo1 > cavalo3 && cavalo2 > cavalo3) {
@@ -55,7 +69,7 @@
 
             Em 3º Lugar – ${cavalo3} <br>
             `
-        }else if(cavalo2 > cavalo1 && cavalo2 > cavalo3 && cavalo2 > cavalo3){
+        } else if (cavalo2 > cavalo1 && cavalo2 > cavalo3 && cavalo2 > cavalo3) {
 
         }
 
