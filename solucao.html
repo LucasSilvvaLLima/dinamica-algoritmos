@@ -30,25 +30,26 @@
         for(i = 0; i < 7; i++){
             var volta1 = 7+Math.random()*(9-7)
 
-            contador1 += volta1
+            contador1 = contador1 + volta1 
         }
 
         
         for(i = 0; i < 7; i++){
             var volta2 = 7+Math.random()*(9-7)
 
-            contador2 += volta2 
+            contador2 = contador2 + volta2 
         }
+        
 
         for(i = 0; i < 7; i++){
             var volta3 = 7+Math.random()*(9-7)
 
-            contador3 += 
+            contador3 = contador3 + volta3
             voltas++
         }
 
         div_mensagem.innerHTML += `Volta ${voltas} <br>
-                                    Cavalo 01 - 1.${cavalo1} - ${contador1}`
-
+                                    Cavalo 01 - 1.${cavalo1.toFixed(2)} - ${contador1} <br>`
     }
+    
 </script>
