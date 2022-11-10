@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="corrida()">Corrida</button><br>
+    <button onclick="corrida()">Dar a largada</button><br>
 
     <div id="div_mensagem"></div>
 
@@ -21,13 +21,34 @@
         var cavalo2 = 0
         var cavalo3 = 0
 
-        var contador = 0
+        var contador1 = 0
+        var contador2 = 0
+        var contador3 = 0
+        
+        var voltas = 0
 
         for(i = 0; i < 7; i++){
-            var volta = 7+Math.random()*9
+            var volta1 = 7+Math.random()*(9-7)
 
-            contador += volta 
+            contador1 += volta1
         }
+
+        
+        for(i = 0; i < 7; i++){
+            var volta2 = 7+Math.random()*(9-7)
+
+            contador2 += volta2 
+        }
+
+        for(i = 0; i < 7; i++){
+            var volta3 = 7+Math.random()*(9-7)
+
+            contador3 += 
+            voltas++
+        }
+
+        div_mensagem.innerHTML += `Volta ${voltas} <br>
+                                    Cavalo 01 - 1.${cavalo1} - ${contador1}`
 
     }
 </script>
