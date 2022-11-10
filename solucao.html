@@ -13,6 +13,7 @@
     Digite o nome do segundo cavalo: <br><input type="text" id="nome_cavalo2"><br>
     Digite o nome do terceiro cavalo: <br> <input type="text" id="nome_cavalo3"><br>
     <!-- Colocar input de voltas -->
+
     <button onclick="corrida()">Dar a largada</button><br>
 
     <div id="div_mensagem"></div>
@@ -46,6 +47,17 @@
                                          Cavalo 01 - ${cav1.toFixed(2)} - ${cavalo1.toFixed(2)} – Cavalo02 – ${cav2.toFixed(2)} – ${cavalo2.toFixed(2)} - Cavalo03 – ${cav3.toFixed(2)} –${cavalo3.toFixed(2)}    <br>`
         }
 
+        if (cavalo1 > cavalo2 && cavalo1 > cavalo3 && cavalo2 > cavalo3) {
+            resultado.innerHTML = `
+            Em 1º Lugar – ${cavalo1} <br>
+
+            Em 2º Lugar – ${cavalo2} <br>
+
+            Em 3º Lugar – ${cavalo3} <br>
+            `
+        }else if(cavalo2 > cavalo1 && cavalo2 > cavalo3 && cavalo2 > cavalo3){
+
+        }
 
     }
 
